@@ -23,8 +23,7 @@ public class selectalldata{
 
     public void selectAll(){
         String sql = "SELECT Movie_name,actor,actress,year,director FROM Movie";
-        // if u need to fetch all row use select * from [tablename];
-        // and in whileloop(rs.next()) --> need to call all the column names to print..
+// select all data - use select * from Movie;
         try (Connection conn = this.connect();
              Statement stmt  = conn.createStatement();
              ResultSet rs    = stmt.executeQuery(sql)){
